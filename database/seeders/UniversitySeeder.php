@@ -1,0 +1,193 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class UniversitySeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $universities = [
+            // Aceh
+            [
+                'name' => 'Universitas Syiah Kuala',
+                'short_name' => 'USK',
+                'city' => 'Banda Aceh',
+                'province' => 'Aceh',
+                'type' => 'negeri',
+                'latitude' => 5.5577,
+                'longitude' => 95.3222,
+                'contact_person' => 'Dr. Ir. Marwan, M.Eng',
+                'contact_email' => 'kemahasiswaan@usk.ac.id',
+                'contact_phone' => '0651-7551736',
+                'website' => 'https://www.usk.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Universitas Islam Negeri Ar-Raniry',
+                'short_name' => 'UIN Ar-Raniry',
+                'city' => 'Banda Aceh',
+                'province' => 'Aceh',
+                'type' => 'negeri',
+                'latitude' => 5.5577,
+                'longitude' => 95.3222,
+                'contact_person' => 'Prof. Dr. H. Warul Walidin AK, MA',
+                'contact_email' => 'info@ar-raniry.ac.id',
+                'contact_phone' => '0651-7557373',
+                'website' => 'https://www.ar-raniry.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Politeknik Aceh',
+                'short_name' => 'POLTEK Aceh',
+                'city' => 'Banda Aceh',
+                'province' => 'Aceh',
+                'type' => 'politeknik',
+                'latitude' => 5.5577,
+                'longitude' => 95.3222,
+                'contact_person' => 'Dr. Ir. Yusrizal, M.Eng',
+                'contact_email' => 'info@poltek-aceh.ac.id',
+                'contact_phone' => '0651-7426356',
+                'website' => 'https://www.poltek-aceh.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Universitas Malikussaleh',
+                'short_name' => 'UNIMAL',
+                'city' => 'Lhokseumawe',
+                'province' => 'Aceh',
+                'type' => 'negeri',
+                'latitude' => 5.1793,
+                'longitude' => 97.1433,
+                'contact_person' => 'Prof. Dr. Apridar, SE, M.Si',
+                'contact_email' => 'rektorat@unimal.ac.id',
+                'contact_phone' => '0645-41373',
+                'website' => 'https://www.unimal.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Politeknik Negeri Lhokseumawe',
+                'short_name' => 'PNL',
+                'city' => 'Lhokseumawe',
+                'province' => 'Aceh',
+                'type' => 'politeknik',
+                'latitude' => 5.1793,
+                'longitude' => 97.1433,
+                'contact_person' => 'Dr. Ir. Rahmat Hidayat, M.T.',
+                'contact_email' => 'info@pnl.ac.id',
+                'contact_phone' => '0645-42785',
+                'website' => 'https://www.pnl.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Universitas Teuku Umar',
+                'short_name' => 'UTU',
+                'city' => 'Meulaboh',
+                'province' => 'Aceh',
+                'type' => 'negeri',
+                'latitude' => 4.1394,
+                'longitude' => 96.1267,
+                'contact_person' => 'Dr. Ir. Danial, M.Si',
+                'contact_email' => 'rektorat@utu.ac.id',
+                'contact_phone' => '0655-7003134',
+                'website' => 'https://www.utu.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Universitas Samudra',
+                'short_name' => 'UNSAM',
+                'city' => 'Langsa',
+                'province' => 'Aceh',
+                'type' => 'negeri',
+                'latitude' => 4.4697,
+                'longitude' => 97.9675,
+                'contact_person' => 'Prof. Dr. Ir. Husaini, M.T.',
+                'contact_email' => 'rektorat@unsam.ac.id',
+                'contact_phone' => '0641-426666',
+                'website' => 'https://www.unsam.ac.id',
+                'is_active' => true,
+            ],
+            // Sumatra Utara
+            [
+                'name' => 'Universitas Sumatera Utara',
+                'short_name' => 'USU',
+                'city' => 'Medan',
+                'province' => 'Sumatera Utara',
+                'type' => 'negeri',
+                'latitude' => 3.5952,
+                'longitude' => 98.6722,
+                'contact_person' => 'Prof. Dr. Runtung Sitepu, S.H., M.Hum',
+                'contact_email' => 'rektorat@usu.ac.id',
+                'contact_phone' => '061-8213737',
+                'website' => 'https://www.usu.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Institut Teknologi Del',
+                'short_name' => 'IT Del',
+                'city' => 'Toba',
+                'province' => 'Sumatera Utara',
+                'type' => 'swasta',
+                'latitude' => 2.3833,
+                'longitude' => 99.1333,
+                'contact_person' => 'Dr. Ir. Luhut B. Sagala, M.Eng',
+                'contact_email' => 'info@del.ac.id',
+                'contact_phone' => '0632-331234',
+                'website' => 'https://www.del.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Politeknik Negeri Medan',
+                'short_name' => 'POLMED',
+                'city' => 'Medan',
+                'province' => 'Sumatera Utara',
+                'type' => 'politeknik',
+                'latitude' => 3.5952,
+                'longitude' => 98.6722,
+                'contact_person' => 'Dr. Ir. Nazaruddin Matondang, M.T.',
+                'contact_email' => 'info@polmed.ac.id',
+                'contact_phone' => '061-7320386',
+                'website' => 'https://www.polmed.ac.id',
+                'is_active' => true,
+            ],
+            // Sumatera Barat
+            [
+                'name' => 'Universitas Andalas',
+                'short_name' => 'UNAND',
+                'city' => 'Padang',
+                'province' => 'Sumatera Barat',
+                'type' => 'negeri',
+                'latitude' => -0.9471,
+                'longitude' => 100.4172,
+                'contact_person' => 'Prof. Dr. Yuliandri, S.H., M.H.',
+                'contact_email' => 'rektorat@unand.ac.id',
+                'contact_phone' => '0751-777825',
+                'website' => 'https://www.unand.ac.id',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Politeknik Negeri Padang',
+                'short_name' => 'PNP',
+                'city' => 'Padang',
+                'province' => 'Sumatera Barat',
+                'type' => 'politeknik',
+                'latitude' => -0.9471,
+                'longitude' => 100.4172,
+                'contact_person' => 'Dr. Ir. Surfa Yondri, M.T.',
+                'contact_email' => 'info@pnp.ac.id',
+                'contact_phone' => '0751-72590',
+                'website' => 'https://www.pnp.ac.id',
+                'is_active' => true,
+            ],
+        ];
+
+        foreach ($universities as $university) {
+            \App\Models\University::create($university);
+        }
+    }
+}
