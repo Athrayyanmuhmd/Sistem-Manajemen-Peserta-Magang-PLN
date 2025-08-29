@@ -19,17 +19,31 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Public API routes (with throttling)
-Route::middleware(['api.throttle:60,1'])->group(function () {
-    // Health check endpoint
-    Route::get('/health', function () {
-        return response()->json([
-            'success' => true,
-            'message' => 'API is healthy',
-            'timestamp' => now()->toISOString(),
-            'version' => config('app.version', '1.0.0')
-        ]);
-    });
+// Health check endpoint
+Route::get('/health', function () {
+    return response()->json([
+        'success' => true,
+        'message' => 'API is healthy',
+        'timestamp' => now()->toISOString(),
+        'version' => config('app.version', '1.0.0')
+    ]);
+});
+
+// Public endpoints for user application form
+Route::get('/universities', function () {
+    $universities = \App\Models\University::select('id', 'name')->get();
+    return response()->json([
+        'success' => true,
+        'data' => $universities
+    ]);
+});
+
+Route::get('/divisions', function () {
+    $divisions = \App\Models\Division::select('id', 'name')->get();
+    return response()->json([
+        'success' => true,
+        'data' => $divisions
+    ]);
 });
 
 // Protected API routes

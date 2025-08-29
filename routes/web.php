@@ -7,9 +7,10 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserApplicationController;
 
 Route::get('/', function () {
-    return redirect()->route('pln.dashboard');
+    return redirect()->route('intern.application.form');
 });
 
 // Authentication Routes
@@ -19,6 +20,29 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Development only - remove in production
 Route::get('/dev-login', [AuthController::class, 'devLogin'])->name('dev-login');
+
+// User Application Routes (Public)
+Route::get('/apply', [UserApplicationController::class, 'showForm'])->name('intern.application.form');
+Route::post('/apply', [UserApplicationController::class, 'store'])->name('intern.application.store');
+Route::get('/apply/success', [UserApplicationController::class, 'success'])->name('intern.application.success');
+
+
+// Simple API routes for user application form
+Route::get('/api/universities', function () {
+    $universities = \App\Models\University::select('id', 'name')->get();
+    return response()->json([
+        'success' => true,
+        'data' => $universities
+    ]);
+});
+
+Route::get('/api/divisions', function () {
+    $divisions = \App\Models\Division::select('id', 'name')->get();
+    return response()->json([
+        'success' => true,
+        'data' => $divisions
+    ]);
+});
 
 // Protected routes - require authentication
 Route::middleware(['dev.auth'])->group(function () {
